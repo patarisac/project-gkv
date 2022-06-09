@@ -10,7 +10,9 @@ Plotly.d3.csv("https://raw.githubusercontent.com/patarisac/project-gkv/main/rank
         locations: unpack(rows, 'Country'),
         z:  unpack(rows,'Happiness score'),
         text: unpack(rows, 'Country'),
-        autocolorscale: true
+        colorscale: 'YlOrRd',
+        reversescale: true,
+        autocolorscale: false
     }];
 
     var layout = {
