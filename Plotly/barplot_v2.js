@@ -1,7 +1,7 @@
 BAR1 = document.getElementById('barplot1');
 BAR2 = document.getElementById('barplot2');
 
-Plotly.d3.csv("rankings.csv", function(err, rows) {
+Plotly.d3.csv("https://raw.githubusercontent.com/patarisac/project-gkv/main/rankings.csv", function(err, rows) {
     const ndata = rows.length;
 
     // fungsi ambil data
