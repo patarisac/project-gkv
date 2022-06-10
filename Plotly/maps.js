@@ -20,6 +20,7 @@ Plotly.d3.csv("https://raw.githubusercontent.com/patarisac/project-gkv/main/rank
 
     var layout = {
         title: "Happiness Score by Country",
+        font : {family: 'Montserrat',size: 12},
         geo: {
             projection: {
                 type: 'robinson'
