@@ -1,7 +1,7 @@
 const canvasSketch = require('canvas-sketch');
 
 const settings = {
-    dimensions: [875, 1000]
+    dimensions: [1000, 1000]
 };
 
 const sketch = () => {
@@ -11,7 +11,7 @@ const sketch = () => {
 
         // Membuat Judul Visualisasi
         context.save();
-        context.translate(875 / 2, 50);
+        context.translate(width / 2, 50);
         context.textAlign = "center";
         context.font = "bold 40px Serif"
         context.fillStyle = "black"
@@ -104,6 +104,8 @@ const sketch = () => {
         context.restore();
 
 
+
+
         /* ==================================================================================== */
 
         posx = 50;
@@ -189,6 +191,46 @@ const sketch = () => {
         context.fillStyle = "black"
         context.fillText("TOP 10 LOWEST HAPPINESS SCORE", 0, 0);
         context.restore();
+
+        // Membuat keterangan warna
+        posx = 900
+        posy = 425
+        lebar = 50
+        nil = 8
+        for (var i = 0; i < 5; i++) {
+            context.beginPath();
+            context.moveTo(posx, posy);
+            context.lineTo(posx + lebar, posy);
+            context.lineTo(posx + lebar, posy + lebar);
+            context.lineTo(posx, posy + lebar);
+            if (nil >= 7) {
+                context.fillStyle = "rgb(232, 122, 0)";
+            } else if (nil >= 5) {
+                context.fillStyle = "rgb(255, 154, 42)";
+            } else if (nil >= 3) {
+                context.fillStyle = "rgb(255, 205, 126)";
+            } else if (nil >= 1) {
+                context.fillStyle = "rgb(251, 225, 183)";
+            } else {
+                context.fillStyle = "rgb(225, 249, 239)";
+            }
+            context.closePath();
+            context.fill();
+            posy = posy + jarak;
+            context.save();
+
+            // Membuat nilai pada sumbu y
+
+            context.translate(posx - 10, posy - 20);
+
+            context.textAlign = "center";
+            context.font = "15px Arial"
+            context.fillStyle = "grey"
+            context.fillText(nil.toString(), 0, 0);
+            nil = nil - 2;
+            context.restore();
+
+        }
 
         /* ==================================================================================== */
 
