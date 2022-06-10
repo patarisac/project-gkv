@@ -30,8 +30,8 @@ Plotly.d3.csv("https://raw.githubusercontent.com/patarisac/project-gkv/main/rank
     }
 
     // ambil data top 5 & bot 5
-    var top5 = get_data(5, "#ab2b84");
-    var bot5 = get_data(-5, "#fa93bb");
+    var top5 = get_data(5, "#efa300");
+    var bot5 = get_data(-5, "#f2e0b9");
 
     console.log(top5);
     console.log(bot5);
@@ -52,4 +52,4 @@ Plotly.d3.csv("https://raw.githubusercontent.com/patarisac/project-gkv/main/rank
     Plotly.newPlot(BAR1, top5, layout1, config);
     Plotly.newPlot(BAR2, bot5, layout2, config);
 
-})
+});
