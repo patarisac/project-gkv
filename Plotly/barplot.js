@@ -7,7 +7,7 @@ var databar1 = [{
     x: [7.415, 7.512, 7.557, 7.636, 7.821],
     y: ['Netherlands', 'Switzerland', 'Iceland', 'Denmark','Finland'],
     marker:{
-        color: '#ab2b84'
+        color: '#efa300'
     },
     orientation: 'h',type: 'bar',name:'Happiness Score', showlegend:true
 }];
@@ -15,7 +15,7 @@ var databar2 = [{
     x: [2.404, 2.955, 2.995, 3.268, 3.471],
     y: ['Afghanistan', 'Lebanon', 'Zimbabwe', 'Rwanda', 'Botswana'],
     marker:{
-        color: '#fa93bb'
+        color: '#f2e0b9'
     },
     orientation:'h', type:'bar', name:'Happiness Score', showlegend:true
 }];
